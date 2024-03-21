@@ -1,0 +1,13 @@
+---
+export interface Props {
+  href: string;
+}
+---
+
+<a
+  class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-14 h-14 relative gap-2 p-4 rounded border-2 border-black group hover:bg-black cursor-pointer transition-colors duration-300"
+  href={Astro.props.href}
+  target="_blank"
+>
+  <slot />
+</a>
