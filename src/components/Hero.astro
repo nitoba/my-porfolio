@@ -1,0 +1,45 @@
+---
+import { HeroIcon } from "@/components/icons/hero";
+---
+
+<div
+  class="grid grid-cols-1 lg:grid-cols-2 lg:mt-16 mt-10 items-center place-items-center lg:max-w-[1300px]"
+>
+  <div
+    class="lg:order-1 order-2 flex flex-col max-w-[600px] overflow-hidden gap-12 py-5"
+  >
+    <div class="flex flex-col relative gap-8">
+      <div class="flex flex-col lg:gap-5 gap-2">
+        <div
+          class="flex lg:text-5xl text-3xl flex-wrap relative lg:gap-4 gap-3"
+        >
+          <p class="text-left text-black">Hello I’am</p>
+          <p class="font-extrabold text-left text-black">Bruno Alves.</p>
+        </div>
+        <div class="flex relative lg:text-5xl text-3xl lg:gap-4 gap-3">
+          <p class="font-extrabold text-left text-black">FullStack</p>
+          <p class="font-extrabold text-left outline-text text-white">
+            Developer
+          </p>
+        </div>
+      </div>
+      <p
+        class="self-stretch flex-grow-0 flex-shrink-0 lg:w-[600px] text-base text-left text-zinc-500"
+      >
+        My goal is to acquire new skills that will improve my performance and
+        productivity, so that I can grow as a person and as a professional,
+        adding more value to the team project. I have knowledge mainly in the
+        construction of products focused on the areas of eco-commerce,
+        landing-pages, Web three, crowdfunding. Being challenged and keeping
+        myself in constant learning are my motivators.
+      </p>
+    </div>
+  </div>
+
+  <HeroIcon.Desktop
+    className="order-1 lg:order-2 w-[55.5625rem] h-auto hidden lg:block"
+  />
+  <HeroIcon.Mobile
+    className="order-1 lg:order-2 w-[21.4375rem] h-auto lg:hidden"
+  />
+</div>
