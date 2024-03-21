@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
-import Skills from "../components/skills/index.astro";
+import Hero from "../components/sections/Hero.astro";
+import Skills from "../components/sections/skills/index.astro";
+import AboutMe from "@/components/sections/AboutMe.astro";
 ---
 
 <Layout title="Bruno Alves | Porfolio">
-  <main class="px-4">
+  <main class="px-4 space-y-16">
     <Hero />
     <Skills />
+    <AboutMe />
   </main>
 </Layout>
