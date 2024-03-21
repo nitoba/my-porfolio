@@ -3,9 +3,7 @@ import { ResumeActionButton } from "./resume-action";
 import { NavLink } from "./nav-link";
 import { NavMenu } from "./nav-menu";
 import Logo from "./Logo.astro";
-import { Sheet, SheetTrigger } from "./ui/sheet";
-import { Button } from "./ui/button";
-import { MenuIcon } from "lucide-react";
+import { ModeToggle } from "@/components/mode-toggle";
 ---
 
 <header
@@ -27,6 +25,9 @@ import { MenuIcon } from "lucide-react";
     </nav>
     <ResumeActionButton className="hidden lg:flex" />
     <NavMenu client:visible>
+      <div class="ml-auto w-fit mt-8">
+        <ModeToggle client:load />
+      </div>
       <nav class="justify-center items-center gap-2 flex flex-col mt-14">
         <NavLink href="/">About Me</NavLink>
         <NavLink href="/">Skills</NavLink>
@@ -35,5 +36,8 @@ import { MenuIcon } from "lucide-react";
         <ResumeActionButton />
       </nav>
     </NavMenu>
+  </div>
+  <div class="absolute right-6 top-6 hidden lg:block">
+    <ModeToggle client:load />
   </div>
 </header>
