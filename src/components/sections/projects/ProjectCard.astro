@@ -17,7 +17,7 @@ const { title, description, image, link, orientation, index } = Astro.props;
   data-orientation={orientation}
 >
   <img
-    src="https://github.com/nitoba.png"
+    src={image}
     class="rounded-2xl object-cover lg:w-[33.125rem] lg:h-[24.858125rem] w-[21.625rem] h-[24.858125rem] lg:group-data-[orientation=left]:order-1 lg:group-data-[orientation=right]:order-2"
     style="box-shadow: 0px 8px 18px -6px rgba(24,39,75,0.12), 0px 12px 42px -4px rgba(24,39,75,0.12);"
   />
@@ -29,15 +29,16 @@ const { title, description, image, link, orientation, index } = Astro.props;
       {index.toString().padStart(2, "0")}
     </p>
     <p class="lg:text-[2rem] text-xl font-bold text-background">
-      Crypto Screener Application
+      {title}
     </p>
-    <p class="text-base text-zinc-500">
-      I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and
-      typesetting industry. Lorem Ipsum has been the industry's standard dummy
-      text ever since the 1500s, when an unknown printer took a galley of type
-      and scrambled it to specimen book.
+    <p class="text-base text-zinc-500 line-clamp-5">
+      {description}
     </p>
-    <a href="/" class="w-fit hover:opacity-50 transition-opacity duration-300">
+    <a
+      href={link}
+      target="_blank"
+      class="w-fit hover:opacity-50 transition-opacity duration-300"
+    >
       <ExternalLink className="text-background" />
     </a>
   </div>
