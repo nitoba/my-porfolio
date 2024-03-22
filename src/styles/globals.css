@@ -72,7 +72,7 @@
   }
 
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth scrollbar-thin scrollbar-track-border scrollbar-thumb-foreground;
   }
   body {
     @apply bg-background text-foreground antialiased;

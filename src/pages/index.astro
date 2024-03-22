@@ -8,10 +8,12 @@ import Projects from "@/components/sections/projects/index.astro";
 ---
 
 <Layout title="Bruno Alves | Porfolio">
-  <main class="px-4 space-y-16">
-    <Hero />
-    <Skills />
-    <AboutMe />
+  <main class="space-y-16">
+    <div class="px-4">
+      <Hero />
+      <Skills />
+      <AboutMe />
+    </div>
     <Projects />
   </main>
   <BackgroundBeams client:only />

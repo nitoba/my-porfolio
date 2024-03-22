@@ -1,0 +1,43 @@
+---
+import ProjectCard from "@/components/sections/projects/ProjectCard.astro";
+const projects = [
+  {
+    title: "Crypto Screener Application",
+    description:
+      "I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    link: "https://github.com/evrenshah",
+    image: "image-771.jpeg",
+  },
+  {
+    title: "Crypto Screener Application",
+    description:
+      "I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    link: "https://github.com/evrenshah",
+    image: "image-771.jpeg",
+  },
+];
+---
+
+<section
+  class="flex flex-col gap-5 bg-foreground w-full px-4 py-5"
+  id="projects"
+>
+  <div class="flex gap-4 py-5 mx-auto mt-8">
+    <p class="lg:text-5xl text-4xl text-background">My</p>
+    <p class="lg:text-5xl text-4xl font-extrabold text-background">Projects</p>
+  </div>
+  <div class="flex flex-col mx-auto">
+    {
+      Array.from({ length: 10 }).map((_, i) => (
+        <ProjectCard
+          index={i + 1}
+          title={""}
+          description={""}
+          link={""}
+          image={""}
+          orientation={i % 2 === 0 ? "left" : "right"}
+        />
+      ))
+    }
+  </div>
+</section>
