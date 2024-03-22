@@ -38,11 +38,36 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta property="og:type" content="website" />
     <title>{title}</title>
+    <meta
+      name="description"
+      content="Showcase your projects and skills. An online resume to highlight your work."
+    />
+    <meta property="og:title" content="Bruno Alves | Porfolio" />
+    <meta property="og:url" content="https://nitodev.vercel.app/" />
+    <meta
+      property="og:image"
+      content="https://nitodev.vercel.app/og-image.png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Bruno Alves | Porfolio" />
+    <meta name="twitter:site" content="@https://nitodev.vercel.app/" />
+    <meta
+      name="twitter:description"
+      content="Showcase your projects and skills. An online resume to highlight your work."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nitodev.vercel.app/og-image.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="https://nitodev.vercel.app/og-image.png"
+    />
+    <meta name="generator" content={Astro.generator} />
   </head>
   <body class="">
     <Header />
