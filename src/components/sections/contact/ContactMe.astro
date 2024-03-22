@@ -1,0 +1,51 @@
+---
+import SocialCardLink from "@/components/SocialCardLink.astro";
+import { SendMessageAction } from "./send-message-action";
+import { Github, Linkedin, Twitter } from "lucide-react";
+---
+
+<section class="flex flex-col items-center pb-16" id="contact-me">
+  <div class="flex gap-4 w-fit">
+    <span class="lg:text-5xl text-3xl font-extrabold text-foreground"
+      >Let’s</span
+    >
+    <span
+      class="lg:text-5xl text-3xl font-extrabold outline-text text-background"
+    >
+      talk
+    </span>
+    <span class="lg:text-5xl text-3xl font-extrabold text-foreground">for</span>
+  </div>
+  <p class="lg:text-5xl text-3xl font-bold text-foreground">
+    Something special
+  </p>
+
+  <SendMessageAction className="mt-5" />
+
+  <div class="my-4">
+    <span class="text-xl font-extrabold outline-text text-background">
+      OR FIND ME ON
+    </span>
+  </div>
+
+  <div class="flex mt-auto gap-8">
+    <SocialCardLink href="https://github.com/nitoba">
+      <Github
+        className="size-10 group-hover:text-background"
+        fill="currentColor"
+      />
+    </SocialCardLink>
+    <SocialCardLink href="https://www.linkedin.com/in/bruno-alves-882173161/">
+      <Linkedin
+        className="size-10 group-hover:text-background"
+        fill="currentColor"
+      />
+    </SocialCardLink>
+    <SocialCardLink href="https://twitter.com/nito_b_a">
+      <Twitter
+        className="size-10 group-hover:text-background"
+        fill="currentColor"
+      />
+    </SocialCardLink>
+  </div>
+</section>
