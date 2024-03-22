@@ -74,6 +74,7 @@
   html {
     @apply scroll-smooth scrollbar-thin scrollbar-track-border scrollbar-thumb-foreground;
   }
+
   body {
     @apply bg-background text-foreground antialiased;
   }
@@ -86,4 +87,8 @@
     1px -1px 0 hsl(var(--foreground)),
     -1px 1px 0 hsl(var(--foreground)),
     1px 1px 0 hsl(var(--foreground));
+}
+
+.center {
+  @apply mx-auto lg:max-w-[1440px];
 }
