@@ -7,37 +7,37 @@ import { ModeToggle } from "@/components/mode-toggle";
 ---
 
 <header
-  class="flex justify-start items-start flex-grow-0 flex-shrink-0 overflow-hidden lg:px-20 py-6 mx-auto"
+  class="flex overflow-hidden lg:px-20 py-6 left-0 mx-auto fixed w-full border-b border-b-border top-0 bg-zinc-50 dark:bg-zinc-900 z-10"
 >
-  <div
-    class="flex justify-between items-center w-full flex-grow-0 flex-shrink-0 overflow-hidden lg:px-8 px-4"
-  >
-    <a href="/">
-      <Logo />
-    </a>
-    <nav
-      class="hidden justify-center items-center flex-grow-0 flex-shrink-0 gap-8 lg:flex"
+  <div class="lg:max-w-[1400px] mx-auto w-full">
+    <div
+      class="flex justify-between items-center w-full overflow-hidden lg:px-8 px-4"
     >
-      <NavLink href="#skills">Skills</NavLink>
-      <NavLink href="#about-me">About Me</NavLink>
-      <NavLink href="#projects">Projects</NavLink>
-      <NavLink href="#contact-me">Contact Me</NavLink>
-    </nav>
-    <ResumeActionButton className="hidden lg:flex" />
-    <NavMenu client:visible>
-      <div class="ml-auto w-fit mt-8">
-        <ModeToggle client:load />
-      </div>
-      <nav class="justify-center items-center gap-2 flex flex-col mt-14">
+      <a href="/">
+        <Logo />
+      </a>
+      <nav class="hidden justify-center items-center gap-8 lg:flex">
         <NavLink href="#skills">Skills</NavLink>
         <NavLink href="#about-me">About Me</NavLink>
         <NavLink href="#projects">Projects</NavLink>
         <NavLink href="#contact-me">Contact Me</NavLink>
-        <ResumeActionButton />
       </nav>
-    </NavMenu>
-  </div>
-  <div class="absolute right-6 top-6 hidden lg:block">
-    <ModeToggle client:load />
+      <ResumeActionButton className="hidden lg:flex" />
+      <NavMenu client:visible>
+        <div class="ml-auto w-fit mt-8">
+          <ModeToggle client:load />
+        </div>
+        <nav class="justify-center items-center gap-2 flex flex-col mt-14">
+          <NavLink href="#skills">Skills</NavLink>
+          <NavLink href="#about-me">About Me</NavLink>
+          <NavLink href="#projects">Projects</NavLink>
+          <NavLink href="#contact-me">Contact Me</NavLink>
+          <ResumeActionButton />
+        </nav>
+      </NavMenu>
+    </div>
+    <div class="absolute right-6 top-6 hidden lg:block">
+      <ModeToggle client:load />
+    </div>
   </div>
 </header>
