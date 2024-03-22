@@ -6,7 +6,7 @@ export function ResumeActionButton(props: ComponentProps<typeof Button>) {
   return (
     <Button asChild {...props}>
       <a
-        href="https://github.com/nitoba/resume/files/14704923/CV.pdf"
+        href="https://nitoba.github.io/resume/CV.pdf"
         download
         target="_blank"
         rel="noreferrer"
