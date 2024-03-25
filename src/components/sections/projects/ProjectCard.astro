@@ -1,19 +1,22 @@
 ---
+import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 interface Props {
   title: string;
   description: string;
   link: string;
   image: string;
+  type: string;
   orientation: "left" | "right";
   index: number;
 }
 
-const { title, description, image, link, orientation, index } = Astro.props;
+const { title, description, image, link, type, orientation, index } =
+  Astro.props;
 ---
 
 <div
-  class="group flex lg:flex-row flex-col items-center lg:gap-10 gap-7 py-5"
+  class="group flex lg:flex-row flex-col items-center lg:gap-10 gap-5 py-5"
   data-orientation={orientation}
 >
   <img
@@ -23,8 +26,9 @@ const { title, description, image, link, orientation, index } = Astro.props;
   />
 
   <div
-    class="flex flex-col gap-7 lg:group-data-[orientation=left]:order-2 lg:group-data-[orientation=right]:order-1 lg:max-w-[582px]"
+    class="flex flex-col lg:gap-7 gap-3 lg:group-data-[orientation=left]:order-2 lg:group-data-[orientation=right]:order-1 lg:max-w-[582px]"
   >
+    <Badge className="w-fit" variant="secondary">{type}</Badge>
     <p class="lg:text-5xl text-2xl font-bold text-background">
       {index.toString().padStart(2, "0")}
     </p>

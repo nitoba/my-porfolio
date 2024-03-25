@@ -6,6 +6,7 @@ export const projects = [
     link: 'https://github.com/nitoba/picpay-challenge',
     image:
       'https://github.com/nitoba/picpay-challenge/raw/main/.github/preview.jpg',
+    type: 'backend',
   },
   {
     title: 'Expo Crop Image',
@@ -14,6 +15,7 @@ export const projects = [
     link: 'https://github.com/nitoba/expo-crop-image',
     image:
       'https://github.com/nitoba/expo-crop-image/raw/main/.github/assets/preview.png',
+    type: 'mobile',
   },
   {
     title: 'Design System Nito UI',
@@ -22,6 +24,7 @@ export const projects = [
     link: 'https://nitoba.github.io/nito-design-system/',
     image:
       'https://github.com/nitoba/nito-design-system/raw/main/.github/preview.jpg',
+    type: 'frontend',
   },
   {
     title: 'Ignite Call',
@@ -29,6 +32,7 @@ export const projects = [
       'Meet Igite Call, the event-juggling scheduler for everyone. Focus on meeting, not making meetings. Free for individuals.',
     link: 'https://ignite-call-nito-ba.vercel.app/',
     image: 'https://github.com/nitoba/ignite-call/raw/main/.github/preview.png',
+    type: 'frontend',
   },
   {
     title: 'Setup Projects',
@@ -37,6 +41,7 @@ export const projects = [
     link: 'https://github.com/nitoba/setup-projects',
     image:
       'https://github.com/nitoba/setup-projects/raw/main/.github/preview.png',
+    type: 'script',
   },
   {
     title: 'The Music App',
@@ -45,6 +50,7 @@ export const projects = [
     link: 'https://the-music-app.vercel.app/',
     image:
       'https://github.com/nitoba/the-music-app/raw/main/.github/preview.png',
+    type: 'frontend',
   },
   {
     title: 'The Movie App',
@@ -53,6 +59,7 @@ export const projects = [
     link: 'https://the-movie-app-teal.vercel.app/',
     image:
       'https://github.com/nitoba/the-movie-app/raw/main/.github/preview.png',
+    type: 'frontend',
   },
   {
     title: 'Virtual University Landing Page',
@@ -61,6 +68,7 @@ export const projects = [
     link: 'https://virtual-university-landing-page.vercel.app/',
     image:
       'https://github.com/nitoba/virtual-university-landing-page/raw/main/.github/preview.png',
+    type: 'frontend',
   },
   {
     title: 'Coffe Delivery',
@@ -69,5 +77,6 @@ export const projects = [
     link: 'https://github.com/nitoba/coffee-delivery',
     image:
       'https://github.com/nitoba/coffee-delivery/blob/main/.github/preview.png?raw=true',
+    type: 'frontend',
   },
 ]

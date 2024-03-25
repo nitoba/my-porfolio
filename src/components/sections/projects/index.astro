@@ -27,13 +27,14 @@ const projectsInDev = [
   </div>
   <div class="flex flex-col mx-auto">
     {
-      projects.map(({ title, description, image, link }, i) => (
+      projects.map(({ title, description, image, link, type }, i) => (
         <ProjectCard
           index={i + 1}
           title={title}
           description={description}
           link={link}
           image={image}
+          type={type}
           orientation={i % 2 === 0 ? "left" : "right"}
         />
       ))
