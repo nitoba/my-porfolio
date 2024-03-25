@@ -12,7 +12,9 @@ import { Github, Linkedin, Twitter } from "lucide-react";
       class="flex flex-col max-w-[600px] overflow-hidden gap-12 py-5 my-auto"
     >
       <div class="flex flex-col relative gap-8">
-        <div class="flex flex-col lg:gap-5 gap-2">
+        <div
+          class="flex flex-col lg:gap-5 gap-2 animate-fade opacity-0 fill-mode-forwards"
+        >
           <div
             class="flex lg:text-5xl text-3xl flex-wrap relative lg:gap-4 gap-3"
           >
@@ -25,7 +27,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
           </div>
         </div>
         <p
-          class="self-stretch flex-grow-0 flex-shrink-0 lg:w-[600px] text-base text-zinc-500"
+          class="self-stretch flex-grow-0 flex-shrink-0 lg:w-[600px] text-base text-zinc-500 animate-fade delay-200 opacity-0 fill-mode-forwards"
         >
           My goal is to acquire new skills that will improve my performance and
           productivity, so that I can grow as a person and as a professional,
@@ -36,7 +38,9 @@ import { Github, Linkedin, Twitter } from "lucide-react";
         </p>
       </div>
     </div>
-    <div class="flex mt-auto gap-8">
+    <div
+      class="flex mt-auto gap-8 animate-fade delay-700 opacity-0 fill-mode-forwards"
+    >
       <SocialCardLink href="https://github.com/nitoba">
         <Github
           className="size-10 group-hover:text-background"
@@ -58,7 +62,9 @@ import { Github, Linkedin, Twitter } from "lucide-react";
     </div>
   </div>
 
-  <div class="order-1 lg:order-2">
+  <div
+    class="order-1 lg:order-2 animate-fade delay-500 opacity-0 fill-mode-forwards"
+  >
     <HeroIcon.Desktop className="w-[55.5625rem] h-auto hidden lg:block" />
     <HeroIcon.Mobile className="w-[21.4375rem] h-auto lg:hidden" />
   </div>
