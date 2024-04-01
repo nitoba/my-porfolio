@@ -1,5 +1,14 @@
 export const projects = [
   {
+    title: 'Point of Interest',
+    description:
+      'The objective of this project is to present a complete solution to the backend developers. The solution implements a api to search for points of interest in a given area.',
+    link: 'https://github.com/nitoba/point-of-interest',
+    image:
+      'https://github.com/nitoba/point-of-interest/raw/main/.github/preview.jpg',
+    type: 'backend',
+  },
+  {
     title: 'PicPay Challenge',
     description:
       'The objective of this project is to present a complete solution to the PicPay challenge aimed at backend developers. The solution implements a simplified system similar to PicPay, focusing on the flow of money transfers between users.',
