@@ -1,6 +1,7 @@
 ---
 import { HeroIcon } from "@/components/illustrations/hero";
 import SocialCardLink from "@/components/SocialCardLink.astro";
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { Github, Linkedin, Twitter } from "lucide-react";
 ---
 
@@ -19,7 +20,12 @@ import { Github, Linkedin, Twitter } from "lucide-react";
             class="flex lg:text-5xl text-3xl flex-wrap relative lg:gap-4 gap-3"
           >
             <p class="text-foreground">Hello I’am</p>
-            <p class="font-extrabold text-foreground">Bruno Alves.</p>
+            <!-- <p class="font-extrabold text-foreground">Bruno Alves.</p> -->
+            <AnimatedShinyText
+              className="transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400 -ml-0.5"
+            >
+              <span class="font-extrabold">Bruno Alves.</span>
+            </AnimatedShinyText>
           </div>
           <div class="flex relative lg:text-5xl text-3xl lg:gap-4 gap-3">
             <p class="font-extrabold text-foreground">FullStack</p>

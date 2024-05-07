@@ -86,6 +86,14 @@ module.exports = {
             opacity: 0,
           },
         },
+        shimmer: {
+          '0%, 90%, 100%': {
+            'background-position': 'calc(-100% - var(--shimmer-width)) 0',
+          },
+          '30%, 60%': {
+            'background-position': 'calc(100% + var(--shimmer-width)) 0',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -94,6 +102,7 @@ module.exports = {
         marquee: 'marquee var(--duration) linear infinite',
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
         meteor: 'meteor 5s linear infinite',
+        shimmer: 'shimmer 8s infinite',
       },
     },
   },
