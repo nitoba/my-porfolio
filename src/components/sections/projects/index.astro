@@ -2,8 +2,10 @@
 import ProjectCard from "@/components/sections/projects/ProjectCard.astro";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { DotPattern } from "@/components/ui/dot-pattern";
 import { Github } from "lucide-react";
 import { projects } from "./projects-data";
+import { cn } from "@/lib/utils";
 
 const projectsInDev = [
   {
@@ -18,7 +20,7 @@ const projectsInDev = [
 ---
 
 <section
-  class="flex flex-col gap-5 bg-foreground w-full px-4 py-5"
+  class="flex flex-col gap-5 bg-foreground w-full px-4 py-5 relative"
   id="projects"
 >
   <div class="flex gap-4 py-5 mx-auto mt-8">
@@ -78,4 +80,10 @@ const projectsInDev = [
       </a>
     </Button>
   </div>
+
+  <DotPattern
+    className={cn(
+      "[mask-image:radial-gradient(ellipse_at_top,white,transparent)]"
+    )}
+  />
 </section>
