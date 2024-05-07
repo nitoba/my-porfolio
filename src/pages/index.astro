@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/sections/Hero.astro";
-import { BackgroundBeams } from "../components/ui/background-beams";
+import { Meteors } from "../components/ui/meteors";
 import Skills from "../components/sections/skills/index.astro";
 import AboutMe from "@/components/sections/AboutMe.astro";
 import Projects from "@/components/sections/projects/index.astro";
@@ -9,7 +9,7 @@ import ContactMe from "@/components/sections/contact/ContactMe.astro";
 ---
 
 <Layout title="Bruno Alves | Porfolio">
-  <main class="space-y-16 pt-20">
+  <main class="space-y-16 pt-20 overflow-x-hidden relative">
     <div class="px-4">
       <Hero />
       <Skills />
@@ -18,6 +18,6 @@ import ContactMe from "@/components/sections/contact/ContactMe.astro";
     <Projects />
 
     <ContactMe />
+    <Meteors client:only />
   </main>
-  <BackgroundBeams client:only />
 </Layout>
