@@ -3,6 +3,7 @@ import { ResumeActionButton } from "./resume-action";
 import { NavLink } from "./nav-link";
 import { NavMenu } from "./nav-menu";
 import Logo from "./Logo.astro";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { ModeToggle } from "@/components/mode-toggle";
 ---
 
@@ -22,7 +23,9 @@ import { ModeToggle } from "@/components/mode-toggle";
         <NavLink href="#projects">Projects</NavLink>
         <NavLink href="#contact-me">Contact Me</NavLink>
       </nav>
+
       <ResumeActionButton className="hidden lg:flex" />
+
       <NavMenu client:visible>
         <div class="ml-auto w-fit mt-8">
           <ModeToggle client:load />
