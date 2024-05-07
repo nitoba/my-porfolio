@@ -1,12 +1,23 @@
 ---
 import { AboutMeIcon } from "@/components/illustrations/about-me";
+import { BorderBeam } from "@/components/ui/border-beam";
 ---
 
 <section
-  class="grid lg:grid-cols-2 grid-cols-1 place-items-center items-start pt-32 center"
+  class="grid lg:grid-cols-2 grid-cols-1 place-items-center items-center pt-32 center"
   id="about-me"
 >
-  <AboutMeIcon className="w-[21.4375rem] lg:w-auto h-auto" />
+  <div class="relative rounded-lg pb-4">
+    <AboutMeIcon className="w-[21.4375rem] lg:w-auto h-auto" />
+    <BorderBeam
+      size={250}
+      duration={12}
+      delay={9}
+      borderWidth={2}
+      colorFrom="#000"
+      colorTo="#DDD"
+    />
+  </div>
   <div class="flex flex-col gap-5">
     <div class="flex gap-4 py-5">
       <p class="lg:text-5xl text-4xl text-foreground">About</p>

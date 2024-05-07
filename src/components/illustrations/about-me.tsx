@@ -8,12 +8,12 @@ export function AboutMeIcon(props: React.ComponentProps<'svg'>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path
+      {/* <path
         d="M515.447 0H14C7.373 0 2 5.373 2 12v501.447c0 6.627 5.373 12 12 12h501.447c6.627 0 12-5.373 12-12V12c0-6.627-5.373-12-12-12z"
         stroke="currentColor"
         strokeWidth={4}
         strokeMiterlimit={10}
-      />
+      /> */}
       <path
         d="M113.085 526.403H387.62c1.153-10.491-40.899-233.578-90.296-305.295-5.608-8.139-53.614-14.061-71.237 6.184C132.734 334.5 110.83 523.833 113.085 526.403z"
         fill="#000"

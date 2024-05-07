@@ -1,10 +1,11 @@
 ---
 import SocialCardLink from "@/components/SocialCardLink.astro";
+import { RetroGrid } from "@/components/ui/retro-grid";
 import { SendMessageAction } from "./send-message-action";
 import { Github, Linkedin, Twitter } from "lucide-react";
 ---
 
-<section class="flex flex-col items-center pb-16" id="contact-me">
+<section class="flex flex-col items-center pb-16 relative" id="contact-me">
   <div class="flex lg:gap-4 gap-2 w-fit items-center">
     <span class="lg:text-5xl text-3xl font-extrabold text-foreground"
       >Let’s</span
@@ -48,4 +49,5 @@ import { Github, Linkedin, Twitter } from "lucide-react";
       />
     </SocialCardLink>
   </div>
+  <RetroGrid />
 </section>
