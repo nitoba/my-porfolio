@@ -1,54 +1,44 @@
-# Astro Starter Kit: Basics
+<div align='center'>
+	<h1>Meu Portlófio</h1>
+	<img src='https://img.shields.io/github/languages/top/nitoba/shop-hub' alt='Linguagem mais utilizada' />
+	<img src='https://img.shields.io/github/last-commit/nitoba/shop-hub' alt='Último commit' />
+</div>
 
-```sh
-npm create astro@latest -- --template basics
-```
+<div align='center'>
+	<img src='.github/preview.jpeg' alt='Último commit' />
+</div>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Introdução
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Este projeto consiste no código fonte usado para construir o meu site portfólio
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 👨‍💻 Tecnologias
 
-## 🚀 Project Structure
+- [Javascript/Typescript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript): Linguagem de programação principal.
+- [Astro](https://astro.build/): Framework utilizado para construição da interface.
+- [ShadcnUI](https://ui.shadcn.com/): Biblioteca de componentes reaproveitáveis.
+- [Tailwindcss](https://tailwindcss.com/): Framework css para construição de interface baseada em classes utilitárias.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🔧 Executando o projeto
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Para rodar a aplicação você precisa ter o [NodeJS](https://nodejs.org/en) instalados na sua máquina. O projeto usa o pnpm como gerenciador de pacotes mas esteja livre para utilizar qualquer gerenciador da usa preferência.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- Rode o comando `pnpm i` para instalar as dependências.
+- Rode o comando `pnpm dev` para inciar a aplicação.
+- Abra no seu navegador o endereço http://localhost:4321 para visualizar a interface
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🧑‍💻 Possíveis melhorias
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Adicionar uma maneira de colocar os projetos e habilidades de forma dinâmica ao site.
 
-## 🧞 Commands
+## 📄 Licença
 
-All commands are run from the root of the project, from a terminal:
+Este projeto encontra-se sob a licença MIT. Acesse o link [LICENSE](https://mit-license.org/) para mais detalhes.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🌐 GitHub
 
-## 👀 Want to learn more?
+O código dessa aplicação pode ser encontrado no GitHub: [Project Link](https://github.com/nitoba/shop-hub)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📧 Contato
+
+Em caso de dúvidas ou sugestões entre em contato através do email: [nito.ba.dev@gmail.com](mailto:nito.ba.dev@gmail.com).
