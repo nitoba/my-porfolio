@@ -3,8 +3,11 @@ import { ResumeActionButton } from "./resume-action";
 import { NavLink } from "./nav-link";
 import { NavMenu } from "./nav-menu";
 import Logo from "./Logo.astro";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { ModeToggle } from "@/components/mode-toggle";
+import { useTranslation, getLangFromUrl } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslation(lang);
 ---
 
 <header
@@ -18,10 +21,10 @@ import { ModeToggle } from "@/components/mode-toggle";
         <Logo />
       </a>
       <nav class="hidden justify-center items-center gap-8 lg:flex">
-        <NavLink href="#skills">Skills</NavLink>
-        <NavLink href="#about-me">About Me</NavLink>
-        <NavLink href="#projects">Projects</NavLink>
-        <NavLink href="#contact-me">Contact Me</NavLink>
+        <NavLink href="#skills">{t("header").skills}</NavLink>
+        <NavLink href="#about-me">{t("header").about}</NavLink>
+        <NavLink href="#projects">{t("header").projects}</NavLink>
+        <NavLink href="#contact-me">{t("header").contact}</NavLink>
       </nav>
 
       <ResumeActionButton className="hidden lg:flex" />
@@ -31,10 +34,10 @@ import { ModeToggle } from "@/components/mode-toggle";
           <ModeToggle client:load />
         </div>
         <nav class="justify-center items-center gap-2 flex flex-col mt-14">
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#about-me">About Me</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#contact-me">Contact Me</NavLink>
+          <NavLink href="#skills">{t("header").skills}</NavLink>
+          <NavLink href="#about-me">{t("header").about}</NavLink>
+          <NavLink href="#projects">{t("header").projects}</NavLink>
+          <NavLink href="#contact-me">{t("header").contact}</NavLink>
           <ResumeActionButton />
         </nav>
       </NavMenu>
