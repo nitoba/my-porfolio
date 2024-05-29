@@ -28,7 +28,7 @@ export function LangToggle() {
             asChild
             className="flex w-full items-center justify-center"
           >
-            <a href={`/${key === defaultLang ? '' : key}`}>
+            <a href={key === defaultLang ? '/' : `/${key}`}>
               {key.toUpperCase()}
             </a>
           </DropdownMenuItem>
