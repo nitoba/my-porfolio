@@ -1,4 +1,5 @@
 import { languages, defaultLang } from '@/i18n/ui'
+import { getLangFromUrl } from '@/i18n/utils'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -6,27 +7,21 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { useState } from 'react'
 
 export function LangToggle() {
-  const [selectedLanguage, setSelectedLanguage] =
-    useState<keyof typeof languages>(defaultLang)
-
+  const currentLang = getLangFromUrl(new URL(window.location.href))
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm" className="h-9">
-          {languages[selectedLanguage]}
+        <Button variant="outline" size="sm" className="h-9 min-w-16">
+          {languages[currentLang]}
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {Object.entries(languages).map(([key, value]) => (
-          <DropdownMenuItem
-            key={key}
-            onClick={() => setSelectedLanguage(key as keyof typeof languages)}
-          >
-            {value}
+          <DropdownMenuItem key={key} asChild>
+            <a href={`/${key === defaultLang ? '' : key}`}>{value}</a>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
