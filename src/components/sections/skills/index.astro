@@ -1,10 +1,13 @@
 ---
 import SkillCard from "./SkillCard.astro";
 import { Marquee } from "@/components/ui/marquee";
-
+import { useTranslation, getLangFromUrl } from "@/i18n/utils";
 import { skills } from "./skills-data";
 const firstRow = skills.slice(0, skills.length / 2);
 const secondRow = skills.slice(skills.length / 2);
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslation(lang);
 ---
 
 <section class="flex flex-col mt-[5.75rem] w-full items-center" id="skills">
@@ -13,8 +16,10 @@ const secondRow = skills.slice(skills.length / 2);
   >
     <div class="mb-10">
       <p class="lg:text-5xl text-4xl text-foreground inline">
-        My
-        <p class="lg:text-5xl text-4xl font-extrabold inline">Skills</p>
+        {t("skills.my")}
+        <p class="lg:text-5xl text-4xl font-extrabold inline">
+          {t("skills.skills")}
+        </p>
       </p>
     </div>
     <Marquee pauseOnHover className="[--duration:20s]">
