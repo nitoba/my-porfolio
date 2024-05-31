@@ -5,12 +5,14 @@ export const languages = {
   pt: 'Portuguese',
 } as const
 
+export type Lang = keyof typeof languages
+
 export const ui = {
   en: {
-    'header.skills': 'Skills',
-    'header.about': 'About Me',
-    'header.projects': 'Projects',
-    'header.contact': 'Contact Me',
+    'common.skills': 'Skills',
+    'common.about': 'About Me',
+    'common.projects': 'Projects',
+    'common.contact': 'Contact Me',
     'hero.welcome': 'Hello I’am',
     'hero.dev': 'Developer',
     'hero.description':
@@ -32,12 +34,19 @@ export const ui = {
     'projects.description_development':
       'Some projects using focusing in architecture and design pattern principals like Clean Architecture, DDD (Domain Driver Design), SOLID and so on. Follow then bellow',
     'projects.sell_all': 'See all on',
+    'contact.lets': 'Let’s',
+    'contact.talk': 'talk',
+    'contact.for': 'for',
+    'contact.special': 'Something special',
+    'contact.find_me': 'OR FIND ME ON',
+    'contact.send_message': 'Send me a message',
+    'footer.copyright': 'All Rights Reserved.',
   },
   pt: {
-    'header.skills': 'Habilidades',
-    'header.about': 'Sobre',
-    'header.projects': 'Projetos',
-    'header.contact': 'Contato',
+    'common.skills': 'Habilidades',
+    'common.about': 'Sobre',
+    'common.projects': 'Projetos',
+    'common.contact': 'Contato',
     'hero.welcome': 'Olá, eu sou',
     'hero.dev': 'Desenvolvedor',
     'hero.description':
@@ -61,5 +70,12 @@ export const ui = {
     'projects.description_development':
       'Alguns projetos usam foco em princípios de arquitetura e padrões de design como Clean Architecture, DDD (Domain Driver Design), SOLID e assim por diante. Siga abaixo',
     'projects.sell_all': 'Ver todos',
+    'contact.lets': 'Vamos',
+    'contact.talk': 'falar',
+    'contact.for': 'de',
+    'contact.special': 'Algo especial',
+    'contact.find_me': 'OU ENCONTRE-ME EM',
+    'contact.send_message': 'Envie-me uma mensagem',
+    'footer.copyright': 'Todos os direitos reservados.',
   },
 } as const

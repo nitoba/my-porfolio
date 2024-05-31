@@ -3,29 +3,35 @@ import SocialCardLink from "@/components/SocialCardLink.astro";
 import { RetroGrid } from "@/components/ui/retro-grid";
 import { SendMessageAction } from "./send-message-action";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import { useTranslation, getLangFromUrl } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslation(lang);
 ---
 
 <section class="flex flex-col items-center pb-16 relative" id="contact-me">
   <div class="flex lg:gap-4 gap-2 w-fit items-center">
     <span class="lg:text-5xl text-3xl font-extrabold text-foreground"
-      >Let’s</span
+      >{t("contact.lets")}</span
     >
     <span
       class="lg:text-5xl text-3xl font-extrabold outline-text text-background"
     >
-      talk
+      {t("contact.talk")}
     </span>
-    <span class="lg:text-5xl text-3xl font-extrabold text-foreground">for</span>
+    <span class="lg:text-5xl text-3xl font-extrabold text-foreground"
+      >{t("contact.for")}</span
+    >
   </div>
   <p class="lg:text-5xl text-3xl font-bold text-foreground">
-    Something special
+    {t("contact.special")}
   </p>
 
-  <SendMessageAction className="mt-5" />
+  <SendMessageAction className="mt-5" lang={lang} />
 
   <div class="my-4">
     <span class="text-xl font-extrabold outline-text text-background">
-      OR FIND ME ON
+      {t("contact.find_me")}
     </span>
   </div>
 

@@ -1,5 +1,10 @@
 ---
 import Logo from "./Logo.astro";
+import { LangToggle } from "./lang-toggle";
+import { useTranslation, getLangFromUrl } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslation(lang);
 ---
 
 <footer class="bg-foreground border-t border-t-border">
@@ -12,23 +17,32 @@ import Logo from "./Logo.astro";
         class="flex flex-wrap items-center justify-between mt-4 mb-6 lg:mt-0 text-sm font-medium text-zinc-500 sm:mb-0"
       >
         <li>
-          <a href="#about-me" class="hover:underline me-4 md:me-6">About me</a>
+          <a href="#skills" class="hover:underline me-4 md:me-6"
+            >{t("common.skills")}</a
+          >
         </li>
         <li>
-          <a href="#skills" class="hover:underline me-4 md:me-6">Skills</a>
+          <a href="#about-me" class="hover:underline me-4 md:me-6"
+            >{t("common.about")}</a
+          >
         </li>
         <li>
-          <a href="#projects" class="hover:underline me-4 md:me-6">Projects</a>
+          <a href="#projects" class="hover:underline me-4 md:me-6"
+            >{t("common.projects")}</a
+          >
         </li>
         <li>
-          <a href="#contact-me" class="hover:underline">Contact</a>
+          <a href="#contact-me" class="hover:underline">{t("common.contact")}</a
+          >
         </li>
       </ul>
     </div>
     <hr class="my-6 border-zinc-500 sm:mx-auto lg:my-8" />
     <span class="block text-sm text-zinc-500 text-center"
       >© {new Date().getFullYear()}
-      <a href="/" class="hover:underline">NitoDev</a>. All Rights Reserved.</span
+      <a href="/" class="hover:underline">NitoDev</a>. {
+        t("footer.copyright")
+      }</span
     >
   </div>
 </footer>
