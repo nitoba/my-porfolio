@@ -25,6 +25,13 @@ export const ui = {
       "I began my journey as a web developer in 2019, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. I spend my day studying and developing myself by building cutting-edge web applications using modern technologies such as Next.js, TypeScript, Nestjs, Tailwindcss, Supabase and much more.",
     'about.description3':
       "When I'm not in full developer mode, you can find me reading, playing my guitar, or enjoying some free time. You can follow me on Twitter where I share technology-related information, or you can follow me on GitHub.",
+    'projects.my': 'My',
+    'projects.projects': 'Projects',
+    'projects.in': 'In',
+    'projects.development': 'Development',
+    'projects.description_development':
+      'Some projects using focusing in architecture and design pattern principals like Clean Architecture, DDD (Domain Driver Design), SOLID and so on. Follow then bellow',
+    'projects.sell_all': 'See all on',
   },
   pt: {
     'header.skills': 'Habilidades',
@@ -38,13 +45,21 @@ export const ui = {
     'skills.my': 'Minhas',
     'skills.skills': 'Habilidades',
 
-    'about.me': 'Me',
-    'about.about': 'About',
+    'about.me': 'Mim',
+    'about.about': 'Sobre',
     'about.description1':
       'Sou um apaixonado por desenvolvimento full stack (React.js & #x26; Node.js) e todo ecossistema web. Estou muito entusiasmado em dar vida aos aspectos técnicos e visuais dos produtos digitais. Estou muito entusiasmado em dar vida a produtos digitais que possam impactar e trazer uma boa experiência aos usuários. Escrever código legível e de alto desempenho é importante para mim.',
     'about.description2':
       'Comecei minha jornada como desenvolvedor web em 2019 e, desde então, continuo crescendo e evoluindo como desenvolvedor, enfrentando novos desafios e aprendendo as tecnologias mais recentes ao longo do caminho. Passo o dia estudando e me desenvolvendo construindo aplicativos web de ponta usando tecnologias modernas como Next.js, TypeScript, Nestjs, Tailwindcss, Supabase e muito mais.',
     'about.description3':
       'Quando não estou no modo de desenvolvedor completo, você pode me encontrar lendo, tocando violão ou aproveitando o tempo livre. Você pode me seguir no Twitter, onde compartilho informações relacionadas à tecnologia, ou pode me seguir no GitHub.',
+
+    'projects.my': 'Meus',
+    'projects.projects': 'Projetos',
+    'projects.in': 'Em',
+    'projects.development': 'Desenvolvimento',
+    'projects.description_development':
+      'Alguns projetos usam foco em princípios de arquitetura e padrões de design como Clean Architecture, DDD (Domain Driver Design), SOLID e assim por diante. Siga abaixo',
+    'projects.sell_all': 'Ver todos',
   },
 } as const
