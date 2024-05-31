@@ -3,6 +3,10 @@ import { HeroIcon } from "@/components/illustrations/hero";
 import SocialCardLink from "@/components/SocialCardLink.astro";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import { useTranslation, getLangFromUrl } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslation(lang);
 ---
 
 <section
@@ -19,8 +23,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
           <div
             class="flex lg:text-5xl text-3xl flex-wrap relative lg:gap-4 gap-3"
           >
-            <p class="text-foreground">Hello I’am</p>
-            <!-- <p class="font-extrabold text-foreground">Bruno Alves.</p> -->
+            <p class="text-foreground">{t("hero.welcome")}</p>
             <AnimatedShinyText
               className="transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400 -ml-0.5"
             >
@@ -29,18 +32,15 @@ import { Github, Linkedin, Twitter } from "lucide-react";
           </div>
           <div class="flex relative lg:text-5xl text-3xl lg:gap-4 gap-3">
             <p class="font-extrabold text-foreground">FullStack</p>
-            <p class="font-extrabold outline-text text-background">Developer</p>
+            <p class="font-extrabold outline-text text-background">
+              {t("hero.dev")}
+            </p>
           </div>
         </div>
         <p
           class="self-stretch flex-grow-0 flex-shrink-0 lg:w-[600px] text-base text-zinc-500 animate-fade delay-200 opacity-0 fill-mode-forwards"
         >
-          My goal is to acquire new skills that will improve my performance and
-          productivity, so that I can grow as a person and as a professional,
-          adding more value to the team project. I have knowledge mainly in the
-          construction of products focused on the areas of eco-commerce,
-          landing-pages, Web three, crowdfunding. Being challenged and keeping
-          myself in constant learning are my motivators.
+          {t("hero.description")}
         </p>
       </div>
     </div>

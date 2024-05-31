@@ -7,6 +7,11 @@ import { Github } from "lucide-react";
 import { projects } from "./projects-data";
 import { cn } from "@/lib/utils";
 
+import { useTranslation, getLangFromUrl } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslation(lang);
+
 const projectsInDev = [
   {
     title: "Psyfi",
@@ -24,8 +29,10 @@ const projectsInDev = [
   id="projects"
 >
   <div class="flex gap-4 py-5 mx-auto mt-8">
-    <p class="lg:text-5xl text-4xl text-background">My</p>
-    <p class="lg:text-5xl text-4xl font-extrabold text-background">Projects</p>
+    <p class="lg:text-5xl text-4xl text-background">{t("projects.my")}</p>
+    <p class="lg:text-5xl text-4xl font-extrabold text-background">
+      {t("projects.projects")}
+    </p>
   </div>
   <div
     class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 mx-auto max-w-screen-xl"
@@ -46,13 +53,13 @@ const projectsInDev = [
   </div>
   <Separator className="bg-zinc-700 w-3/4 mx-auto" />
   <div class="flex gap-2 lg:py-5 mx-auto">
-    <p class="text-3xl text-background">In</p>
-    <p class="text-3xl font-extrabold text-background">Development</p>
+    <p class="text-3xl text-background">{t("projects.in")}</p>
+    <p class="text-3xl font-extrabold text-background">
+      {t("projects.development")}
+    </p>
   </div>
   <span class="mx-auto text-zinc-500 lg:text-xl max-w-3xl text-center">
-    Some projects using focusing in archtecture and design pattern principals
-    like Clean Archtecture, DDD (Domain Driver Design), SOLID and so on. Follow
-    then bellow
+    {t("projects.description_development")}
   </span>
   <div class="flex gap-4 mx-auto">
     {
@@ -75,7 +82,8 @@ const projectsInDev = [
         <span
           class="text-xl inline-flex gap-2 items-center outline-text text-background uppercase font-bold"
         >
-          See All On <Github
+          {t("projects.sell_all")}
+          <Github
             className="size-5 fill-current group-hover:fill-foreground stroke-current group-hover:stroke-foreground"
           />
         </span>
