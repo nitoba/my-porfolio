@@ -1,5 +1,14 @@
 export const projects = [
   {
+    title: 'Report Creator AI',
+    description:
+      'The Report Creator AI is a project that uses artificial intelligence to automatically generate weekly reports. These reports are stored on Google Drive, and the content used to generate the reports is consumed from a Discord channel.',
+    link: 'https://github.com/nitoba/report-creator-ai',
+    image:
+      'https://github.com/nitoba/report-creator-ai/raw/main/.github/preview.jpeg',
+    type: 'backend',
+  },
+  {
     title: 'Point of Interest',
     description:
       'The objective of this project is to present a complete solution to the backend developers. The solution implements a api to search for points of interest in a given area.',
