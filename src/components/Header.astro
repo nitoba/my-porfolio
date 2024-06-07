@@ -31,8 +31,9 @@ const t = useTranslation(lang);
       <ResumeActionButton className="hidden lg:flex" />
 
       <NavMenu client:visible>
-        <div class="ml-auto w-fit mt-8">
+        <div class="flez gap-3 ml-auto w-fit mt-8">
           <ModeToggle client:load />
+          <LangToggle client:only />
         </div>
         <nav class="justify-center items-center gap-2 flex flex-col mt-14">
           <NavLink href="#skills">{t("common.skills")}</NavLink>
