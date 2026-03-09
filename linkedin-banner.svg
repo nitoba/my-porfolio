@@ -1,0 +1,69 @@
+<svg width="1584" height="396" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#1e1e21" stroke-width="0.5"/>
+    </pattern>
+    <!-- Glow centered-right -->
+    <radialGradient id="glow" cx="0.65" cy="0.45" r="0.4">
+      <stop offset="0%" stop-color="#FACC15" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#FACC15" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1584" height="396" fill="#0F0F10"/>
+  <rect width="1584" height="396" fill="url(#grid)"/>
+  <rect width="1584" height="396" fill="url(#glow)"/>
+
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="1584" height="3" fill="#FACC15"/>
+
+  <!-- LEFT SIDE: Decorative code (faded, behind profile photo zone) -->
+  <text x="60" y="70" font-family="JetBrains Mono, monospace" font-size="11" fill="#1a1a1e" font-weight="400" letter-spacing="0.5">import { Developer } from "@nitodev";</text>
+  <text x="60" y="92" font-family="JetBrains Mono, monospace" font-size="11" fill="#1a1a1e" font-weight="400" letter-spacing="0.5"></text>
+  <text x="60" y="114" font-family="JetBrains Mono, monospace" font-size="11" fill="#1a1a1e" font-weight="400" letter-spacing="0.5">const config = {</text>
+  <text x="60" y="136" font-family="JetBrains Mono, monospace" font-size="11" fill="#1a1a1e" font-weight="400" letter-spacing="0.5">  stack: ["React", "Next.js", "Node"],</text>
+  <text x="60" y="158" font-family="JetBrains Mono, monospace" font-size="11" fill="#1a1a1e" font-weight="400" letter-spacing="0.5">  mobile: ["React Native", "Flutter"],</text>
+  <text x="60" y="180" font-family="JetBrains Mono, monospace" font-size="11" fill="#1a1a1e" font-weight="400" letter-spacing="0.5">  ai: ["RAG", "agents", "automation"],</text>
+  <text x="60" y="202" font-family="JetBrains Mono, monospace" font-size="11" fill="#1a1a1e" font-weight="400" letter-spacing="0.5">  available: true,</text>
+  <text x="60" y="224" font-family="JetBrains Mono, monospace" font-size="11" fill="#1a1a1e" font-weight="400" letter-spacing="0.5">};</text>
+
+  <!-- RIGHT SIDE: Main content (safe from profile photo overlap) -->
+
+  <!-- Accent bar -->
+  <rect x="680" y="72" width="3" height="200" fill="#FACC15" opacity="0.6"/>
+
+  <!-- Terminal label -->
+  <text x="712" y="105" font-family="JetBrains Mono, monospace" font-size="13" fill="#FACC15" font-weight="600" letter-spacing="1.5">&gt;_ BRUNO ALVES</text>
+
+  <!-- Main title -->
+  <text x="712" y="160" font-family="JetBrains Mono, monospace" font-size="42" fill="#FAFAFA" font-weight="700" letter-spacing="-0.5">Full Stack Developer</text>
+
+  <!-- Subtitle -->
+  <text x="712" y="205" font-family="JetBrains Mono, monospace" font-size="22" fill="#A1A1AA" font-weight="400" letter-spacing="0.5">AI Systems &amp; Product Engineering</text>
+
+  <!-- Tech tags row -->
+  <rect x="712" y="232" width="82" height="28" rx="0" fill="#18181B" stroke="#27272A" stroke-width="1"/>
+  <text x="753" y="250" font-family="JetBrains Mono, monospace" font-size="10" fill="#A1A1AA" font-weight="500" text-anchor="middle" letter-spacing="0.5">React</text>
+
+  <rect x="804" y="232" width="94" height="28" rx="0" fill="#18181B" stroke="#27272A" stroke-width="1"/>
+  <text x="851" y="250" font-family="JetBrains Mono, monospace" font-size="10" fill="#A1A1AA" font-weight="500" text-anchor="middle" letter-spacing="0.5">Next.js</text>
+
+  <rect x="908" y="232" width="92" height="28" rx="0" fill="#18181B" stroke="#27272A" stroke-width="1"/>
+  <text x="954" y="250" font-family="JetBrains Mono, monospace" font-size="10" fill="#A1A1AA" font-weight="500" text-anchor="middle" letter-spacing="0.5">Node.js</text>
+
+  <rect x="1010" y="232" width="88" height="28" rx="0" fill="#18181B" stroke="#27272A" stroke-width="1"/>
+  <text x="1054" y="250" font-family="JetBrains Mono, monospace" font-size="10" fill="#A1A1AA" font-weight="500" text-anchor="middle" letter-spacing="0.5">NestJS</text>
+
+  <rect x="1108" y="232" width="96" height="28" rx="0" fill="#18181B" stroke="#27272A" stroke-width="1"/>
+  <text x="1156" y="250" font-family="JetBrains Mono, monospace" font-size="10" fill="#A1A1AA" font-weight="500" text-anchor="middle" letter-spacing="0.5">Flutter</text>
+
+  <rect x="1214" y="232" width="100" height="28" rx="0" fill="#18181B" stroke="#FACC15" stroke-width="1"/>
+  <text x="1264" y="250" font-family="JetBrains Mono, monospace" font-size="10" fill="#FACC15" font-weight="600" text-anchor="middle" letter-spacing="0.5">RAG + AI</text>
+
+  <!-- URL -->
+  <text x="1484" y="340" font-family="JetBrains Mono, monospace" font-size="12" fill="#52525B" font-weight="500" text-anchor="end" letter-spacing="1">nitodev.com.br</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="393" width="1584" height="3" fill="#FACC15" opacity="0.35"/>
+</svg>
