@@ -1,0 +1,85 @@
+---
+const educations = [
+  {
+    title: "IFPI — Tecnico em Eletronica",
+    period: "2013 - 2017",
+  },
+  {
+    title: "IFPI — Licenciatura em Ciencias Biologicas",
+    period: "2017 - 2022",
+  },
+];
+
+const contactChips = [
+  { icon: "hgi-mail-01", text: "Email", href: "mailto:nito.ba.dev@gmail.com" },
+  { icon: "hgi-globe-02", text: "Website", href: "https://nitodev.com.br" },
+  { icon: "hgi-linkedin-01", text: "LinkedIn", href: "https://linkedin.com/in/bruno-alves-882173161" },
+];
+---
+
+<section id="contato" data-reveal class="flex flex-col gap-1.5 w-full scroll-mt-6 lg:flex-row">
+  <!-- Education Card -->
+  <div class="flex flex-col gap-4 bg-[var(--color-bg-card)] p-6 border border-[var(--color-border)] md:p-10 md:gap-5 lg:w-[640px] lg:shrink-0">
+    <div class="flex items-center gap-2">
+      <i class="hgi-stroke hgi-mortarboard-02 text-[var(--color-accent)] text-sm"></i>
+      <span class="text-[var(--color-accent)] text-[11px] font-semibold tracking-[1px]">08 FORMACAO E IDIOMAS</span>
+    </div>
+
+    <h2 class="font-display text-xl font-bold text-[var(--color-text-primary)] leading-[1.12] md:text-[26px]">
+      Formacao tecnica e cientifica com aprendizado continuo.
+    </h2>
+
+    {educations.map((edu) => (
+      <div class="flex gap-3 w-full">
+        <i class="hgi-stroke hgi-building-06 text-[var(--color-accent)] text-sm mt-0.5 shrink-0"></i>
+        <div class="flex flex-col gap-1">
+          <span class="text-[var(--color-text-primary)] text-[13px] font-semibold leading-[1.4]">{edu.title}</span>
+          <span class="text-[var(--color-text-muted)] text-[11px] font-medium tracking-[1px]">{edu.period}</span>
+        </div>
+      </div>
+    ))}
+
+    <!-- Divider -->
+    <div class="w-full h-px bg-[var(--color-border)]"></div>
+
+    <!-- Languages -->
+    <div class="flex items-center gap-3 w-full">
+      <i class="hgi-stroke hgi-globe-02 text-[var(--color-accent)] text-sm"></i>
+      <span class="text-[var(--color-text-secondary)] text-[13px] font-medium">
+        Portugues nativo &middot; Ingles intermediario
+      </span>
+    </div>
+  </div>
+
+  <!-- Contact Panel -->
+  <div class="flex flex-col gap-4 bg-[var(--color-bg-card)] p-6 border border-[var(--color-border)] flex-1 md:p-10 md:gap-5">
+    <div class="flex items-center gap-2">
+      <i class="hgi-stroke hgi-chatting-01 text-[var(--color-accent)] text-sm"></i>
+      <span class="text-[var(--color-accent)] text-[11px] font-semibold tracking-[1px]">09 VAMOS CONSTRUIR</span>
+    </div>
+
+    <h2 class="font-display text-[24px] font-bold text-[var(--color-text-primary)] leading-[1.08] md:text-[30px]">
+      Se o desafio pede criterio tecnico, visao de produto e boa execucao, eu topo a conversa.
+    </h2>
+
+    <p class="text-[var(--color-text-secondary)] text-sm font-normal leading-[1.55]">
+      Contato direto por email, LinkedIn, GitHub ou portfolio atual. Ideal para novas parcerias ou evolucao de plataformas existentes.
+    </p>
+
+    <!-- Chips -->
+    <div class="flex flex-col gap-2.5 w-full">
+      {contactChips.map((chip) => (
+        <a href={chip.href} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[var(--color-border)] px-3.5 py-2.5 border border-[var(--color-border-muted)] transition-all duration-200 hover:border-[var(--color-accent)] hover:bg-[var(--color-accent)]/5">
+          <i class={`hgi-stroke ${chip.icon} text-[var(--color-accent)] text-xs`}></i>
+          <span class="text-[var(--color-text-primary)] text-xs font-semibold tracking-[0.5px]">{chip.text}</span>
+        </a>
+      ))}
+    </div>
+
+    <!-- CTA Button -->
+    <a href="mailto:nito.ba.dev@gmail.com" class="group flex items-center justify-center gap-2 bg-[var(--color-accent)] px-6 py-3.5 w-full transition-all duration-200 hover:brightness-110 hover:shadow-[0_0_24px_rgba(250,204,21,0.3)] hover:scale-[1.01] active:scale-[0.98]">
+      <i class="hgi-stroke hgi-arrow-right-01 text-[var(--color-text-on-accent)] text-sm transition-transform duration-200 group-hover:translate-x-0.5"></i>
+      <span class="text-[var(--color-text-on-accent)] text-xs font-bold tracking-[1px]">INICIAR CONVERSA</span>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+---
+const stats = [
+  {
+    icon: "hgi-hourglass",
+    label: "01 EXPERIENCIA",
+    value: "6+ anos",
+    body: "Web, mobile, backend e ciclos completos de produto.",
+  },
+  {
+    icon: "hgi-layers-01",
+    label: "02 PROJETOS",
+    value: "10+ entregas",
+    body: "De plataformas institucionais a dApps, produtos mobile e open source.",
+  },
+  {
+    icon: "hgi-source-code",
+    label: "03 STACK",
+    value: "React a NestJS",
+    body: "React, Next, Angular, Node, NestJS, React Native, Flutter e cloud.",
+  },
+  {
+    icon: "hgi-brain-02",
+    label: "04 IA APLICADA",
+    value: "RAG + agentes",
+    body: "Chatbots, automacoes e engenharia de prompts para negocio real.",
+  },
+];
+---
+
+<section data-reveal-stagger class="grid grid-cols-1 gap-1.5 w-full sm:grid-cols-2 lg:grid-cols-4">
+  {stats.map((stat) => (
+    <div class="flex flex-col gap-3 bg-[var(--color-bg-card)] p-6 border border-[var(--color-border)] md:p-8 md:gap-3.5">
+      <i class={`hgi-stroke ${stat.icon} text-[var(--color-accent)] text-base`}></i>
+      <span class="text-[var(--color-accent)] text-[11px] font-medium tracking-[1px]">{stat.label}</span>
+      <span class="font-display text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">{stat.value}</span>
+      <p class="text-[var(--color-text-secondary)] text-[13px] font-normal leading-[1.5]">{stat.body}</p>
+    </div>
+  ))}
+</section>

@@ -1,0 +1,61 @@
+---
+const channels = [
+  { icon: "hgi-github", text: "github.com/nitoba", href: "https://github.com/nitoba", highlight: true },
+  { icon: "hgi-linkedin-01", text: "linkedin.com/in/bruno-alves-882173161", href: "https://linkedin.com/in/bruno-alves-882173161", highlight: false },
+  { icon: "hgi-new-twitter", text: "x.com/nito_b_a", href: "https://x.com/nito_b_a", highlight: false },
+  { icon: "hgi-mail-01", text: "nito.ba.dev@gmail.com", href: "mailto:nito.ba.dev@gmail.com", highlight: false },
+];
+---
+
+<section id="sobre" data-reveal class="flex flex-col gap-1.5 w-full scroll-mt-6 lg:flex-row">
+  <!-- About Main -->
+  <div class="flex flex-col gap-5 bg-[var(--color-bg-card)] p-6 border border-[var(--color-border)] md:p-11 md:gap-6 lg:w-[860px] lg:shrink-0">
+    <!-- Label -->
+    <div class="flex items-center gap-2">
+      <i class="hgi-stroke hgi-user text-[var(--color-accent)] text-base"></i>
+      <span class="text-[var(--color-accent)] text-[11px] font-medium tracking-[1px]">05 SOBRE</span>
+    </div>
+
+    <h2 class="font-display text-[24px] font-bold text-[var(--color-text-primary)] leading-[1.12] md:text-[28px] lg:text-[32px] lg:leading-[1.08]">
+      Desenvolvo produtos com repertorio de frontend, backend, mobile, cloud e design systems.
+    </h2>
+
+    <p class="text-[var(--color-text-secondary)] text-sm font-normal leading-[1.55] md:text-[15px]">
+      Passei por projetos institucionais, apps de saude, plataformas em Angular e NestJS, experiencias com React e Next.js e produtos mobile com React Native e Flutter. Tambem exploro DX, UI kits e automacoes com IA.
+    </p>
+
+    <p class="text-[var(--color-accent)] text-sm font-semibold leading-[1.5]">
+      Interesses recorrentes: design system, developer experience, IA aplicada, agentes, mobile e arquitetura pragmatica.
+    </p>
+  </div>
+
+  <!-- About Side -->
+  <div class="flex flex-col gap-1.5 flex-1">
+    <!-- Companies Card -->
+    <div class="flex flex-col gap-3 bg-[var(--color-bg-card-alt)] p-5 border border-[var(--color-border)] md:p-7">
+      <div class="flex items-center gap-2">
+        <i class="hgi-stroke hgi-building-06 text-[var(--color-accent)] text-sm"></i>
+        <span class="text-[var(--color-accent)] text-[11px] font-medium tracking-[1px]">ONDE JA ATUEI</span>
+      </div>
+      <h3 class="font-display text-lg font-bold text-[var(--color-text-primary)] leading-[1.12] md:text-[22px]">
+        Instituto Biosistemico / Tegra / Sthorm / Labiras
+      </h3>
+      <p class="text-[var(--color-text-secondary)] text-sm font-normal leading-[1.5] md:text-[15px]">
+        Experiencia em times presenciais e remotos, com entregas de 2017 ate hoje.
+      </p>
+    </div>
+
+    <!-- Links Card -->
+    <div class="flex flex-col gap-3 bg-[var(--color-bg-card-alt)] p-5 border border-[var(--color-border)] flex-1 md:p-7">
+      <span class="text-[var(--color-accent)] text-[11px] font-medium tracking-[1px]">CANAIS</span>
+      {channels.map((ch) => (
+        <a href={ch.href} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 min-w-0 transition-colors duration-200 hover:opacity-80">
+          <i class={`hgi-stroke ${ch.icon} text-[var(--color-accent)] text-sm shrink-0`}></i>
+          <span class={`truncate ${ch.highlight ? 'font-display text-lg font-bold text-[var(--color-text-primary)] md:text-[22px]' : 'text-[var(--color-text-secondary)] text-sm font-normal md:text-base'}`}>
+            {ch.text}
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

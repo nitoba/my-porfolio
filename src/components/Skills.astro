@@ -1,0 +1,90 @@
+---
+const skills = [
+  {
+    icon: "hgi-computer",
+    text: "Frontend — React.js, Next.js, Angular,\nHTML, CSS, JavaScript, TailwindCSS, Radix UI",
+  },
+  {
+    icon: "hgi-hard-drive",
+    text: "Backend — Node.js, NestJS, Express, Fastify,\nRESTful APIs, GraphQL, PostgreSQL, MySQL, Prisma, Drizzle",
+  },
+  {
+    icon: "hgi-smart-phone-01",
+    text: "Mobile — React Native, Flutter, Expo",
+  },
+  {
+    icon: "hgi-cloud",
+    text: "Cloud & Tools — AWS, Google Cloud, Docker, Git, Vercel, Figma",
+  },
+  {
+    icon: "hgi-brain-02",
+    text: "AI — Prompt Engineering, RAG, chatbots,\nOpenCode, Claude Code, automacoes com IA",
+  },
+];
+---
+
+<section id="projetos" data-reveal class="flex flex-col gap-1.5 w-full scroll-mt-6 lg:flex-row">
+  <!-- Skills Card -->
+  <div class="flex flex-col gap-4 bg-[var(--color-bg-primary)] p-6 border-l-[3px] border-l-[var(--color-accent)] md:p-10 md:gap-5 lg:w-[560px] lg:shrink-0">
+    <div class="flex items-center gap-2">
+      <i class="hgi-stroke hgi-wrench-01 text-[var(--color-accent)] text-base"></i>
+      <span class="text-[var(--color-accent)] text-[11px] font-medium tracking-[1px]">07 CAPABILIDADES</span>
+    </div>
+
+    <h2 class="font-display text-[24px] font-bold text-[var(--color-text-primary)] leading-[1.12] md:text-[28px] lg:text-[30px] lg:leading-[1.08]">
+      Frontend, backend, mobile, cloud e IA organizada em stacks que escalam.
+    </h2>
+
+    {skills.map((skill) => (
+      <div class="flex gap-2.5 w-full">
+        <i class={`hgi-stroke ${skill.icon} text-[var(--color-accent)] text-sm mt-1 shrink-0`}></i>
+        <p class="text-[var(--color-text-primary)] text-sm font-normal leading-[1.55] whitespace-pre-line md:text-base">{skill.text}</p>
+      </div>
+    ))}
+  </div>
+
+  <!-- Projects Wrap -->
+  <div class="flex flex-col gap-1.5 flex-1">
+    <!-- Projects Card -->
+    <div class="flex flex-col gap-3 bg-[var(--color-bg-card)] p-6 border border-[var(--color-border)] md:p-9 md:gap-3.5">
+      <div class="flex items-center gap-2">
+        <i class="hgi-stroke hgi-folder-01 text-[var(--color-accent)] text-base"></i>
+        <span class="text-[var(--color-accent)] text-[11px] font-medium tracking-[1px]">10 PROJETOS E OPEN SOURCE</span>
+      </div>
+
+      <h3 class="font-display text-xl font-bold text-[var(--color-text-primary)] leading-[1.1] md:text-[26px]">
+        Expo Crop Image, Clean Dart CLI, RSXp, Sobralcar e Morcegos do Piaui.
+      </h3>
+
+      <p class="text-[var(--color-text-secondary)] text-sm font-normal leading-[1.55] md:text-base">
+        Participacao em comunidade open source, projetos freelance e iniciativas educacionais que mostram curiosidade tecnica e repertorio de produto.
+      </p>
+
+      <!-- Project Visual -->
+      <div class="w-full h-[100px] bg-[var(--color-bg-card-alt)] overflow-hidden md:h-[120px]">
+        <img
+          src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=120&fit=crop"
+          alt="Projects"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+
+    <!-- Contact Prompt -->
+    <div class="flex flex-col gap-3 bg-[var(--color-bg-card)] p-6 border border-[var(--color-border)] md:p-8 md:gap-3.5">
+      <div class="flex items-center gap-2">
+        <i class="hgi-stroke hgi-wifi text-[var(--color-accent)] text-base"></i>
+        <span class="text-[var(--color-accent)] text-[11px] font-medium tracking-[1px]">11 DISPONIBILIDADE</span>
+        <i class="hgi-stroke hgi-record text-[var(--color-accent-green)] text-[10px]"></i>
+      </div>
+
+      <h3 class="font-display text-xl font-bold text-[var(--color-text-primary)] leading-[1.1] md:text-[26px]">
+        Aberto para produtos digitais, plataformas internas, apps e fluxos com IA aplicada.
+      </h3>
+
+      <p class="text-[var(--color-text-secondary)] text-sm font-normal leading-[1.55] md:text-base">
+        Base no Brasil, colaboracao remota, ingles intermediario e repertorio tecnico para times que precisam sair do prototipo e chegar em producao.
+      </p>
+    </div>
+  </div>
+</section>

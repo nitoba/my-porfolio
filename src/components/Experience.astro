@@ -1,0 +1,72 @@
+---
+const experiences = [
+  [
+    {
+      company: "Instituto Biosistemico",
+      role: "Full Stack Developer",
+      date: "Abr 2025 - Presente",
+      body: "Angular no frontend, NestJS e Node.js no backend, dados relacionais e NoSQL, mais chatbots, RAG e automacoes para processos de negocio.",
+      highlighted: true,
+    },
+    {
+      company: "Tegra",
+      role: "Full Stack Developer",
+      date: "Abr 2024 - Mai 2025",
+      body: "Entregas em Angular, NestJS e Node.js com foco em performance, manutencao, APIs RESTful e colaboracao com times multidisciplinares.",
+      highlighted: false,
+    },
+  ],
+  [
+    {
+      company: "Sthorm",
+      role: "Full Stack Developer",
+      date: "Ago 2019 - Abr 2024",
+      body: "Mais de 10 projetos em web, backend, mobile e dApps com React, Next.js, NestJS, Angular, React Native, Flutter, GraphQL, Docker, AWS e Google Cloud.",
+      highlighted: false,
+    },
+    {
+      company: "Labiras",
+      role: "Game Developer",
+      date: "Set 2017 - Mai 2019",
+      body: "Base tecnica em desenvolvimento de jogos com Unreal Engine e colaboracao presencial em ambiente criativo.",
+      highlighted: false,
+    },
+  ],
+];
+---
+
+<section id="experiencia" data-reveal class="flex flex-col gap-6 bg-[var(--color-bg-card)] p-6 border border-[var(--color-border)] w-full scroll-mt-6 md:p-10 md:gap-8 lg:p-12">
+  <!-- Intro -->
+  <div class="flex flex-col gap-3 w-full md:gap-3.5">
+    <div class="flex items-center gap-2">
+      <i class="hgi-stroke hgi-briefcase-02 text-[var(--color-accent)] text-base"></i>
+      <span class="text-[var(--color-accent)] text-[11px] font-medium tracking-[1px]">06 EXPERIENCIA SELECIONADA</span>
+    </div>
+
+    <h2 class="font-display text-[26px] font-bold text-[var(--color-text-primary)] tracking-[-0.5px] leading-[1.08] md:text-[32px] lg:text-4xl lg:leading-[1.06]">
+      Uma trajetoria passando por produto, software engineering, mobile e IA aplicada.
+    </h2>
+
+    <p class="text-[var(--color-text-secondary)] text-sm font-normal leading-[1.55] md:text-[15px]">
+      O foco do portfolio e mostrar amplitude tecnica sem perder criterio de produto: interfaces responsivas, APIs robustas, automacao e colaboracao com times diversos.
+    </p>
+  </div>
+
+  <!-- Experience Rows -->
+  {experiences.map((row) => (
+    <div class="flex flex-col gap-1.5 w-full md:flex-row">
+      {row.map((exp) => (
+        <div class={`flex flex-col gap-3 bg-[var(--color-bg-card-alt)] p-6 flex-1 md:p-8 ${exp.highlighted ? 'border-l-[3px] border-l-[var(--color-accent)]' : 'border border-[var(--color-border)]'}`}>
+          <h3 class="font-display text-lg font-bold text-[var(--color-text-primary)] leading-[1.12] md:text-[22px]">
+            {exp.company} / {exp.role}
+          </h3>
+          <div class="flex items-center gap-2">
+            <i class="hgi-stroke hgi-calendar-03 text-[var(--color-accent)] text-xs"></i>
+            <span class="text-[var(--color-accent)] text-[11px] font-semibold tracking-[1px]">{exp.date}</span>
+          </div>
+          <p class="text-[var(--color-text-secondary)] text-sm font-normal leading-[1.55] md:text-[15px]">{exp.body}</p>
+        </div>
+      ))}
+    </div>
+  ))}
+</section>

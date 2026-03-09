@@ -1,0 +1,48 @@
+---
+const socials = [
+  { icon: "hgi-github", label: "GITHUB", href: "https://github.com/nitoba" },
+  { icon: "hgi-linkedin-01", label: "LINKEDIN", href: "https://linkedin.com/in/bruno-alves-882173161" },
+  { icon: "hgi-new-twitter", label: "X / TWITTER", href: "https://x.com/nito_b_a" },
+  { icon: "hgi-globe-02", label: "PORTFOLIO", href: "https://nitodev.vercel.app" },
+  { icon: "hgi-mail-01", label: "EMAIL", href: "mailto:nito.ba.dev@gmail.com" },
+];
+---
+
+<footer data-reveal class="flex flex-col gap-6 bg-[var(--color-bg-primary)] p-6 border border-[var(--color-border)] w-full md:p-10 md:gap-8 lg:p-12">
+  <!-- Top Section -->
+  <div class="flex flex-col gap-4 w-full md:gap-5">
+    <div class="flex items-center gap-2.5">
+      <i class="hgi-stroke hgi-terminal text-[var(--color-accent)] text-base"></i>
+      <span class="text-[var(--color-accent)] text-sm font-bold tracking-[2px] typewriter-cursor" data-typewriter="BRUNO ALVES_" data-typewriter-speed="60" data-typewriter-loop></span>
+    </div>
+
+    <p class="font-display text-xl font-bold text-[var(--color-text-primary)] leading-[1.12] md:text-[26px]">
+      Full Stack Developer construindo software com criterio visual, estrutura tecnica e IA aplicada.
+    </p>
+  </div>
+
+  <!-- Divider -->
+  <div class="w-full h-px bg-[var(--color-border)]"></div>
+
+  <!-- Socials Row -->
+  <div class="flex flex-wrap items-center gap-2 w-full md:gap-3">
+    {socials.map((s) => (
+      <a href={s.href} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[var(--color-bg-card)] px-3 py-2 border border-[var(--color-border)] transition-all duration-200 hover:border-[var(--color-accent)] hover:bg-[var(--color-accent)]/5 hover:scale-[1.03] active:scale-95 md:px-4 md:py-2.5">
+        <i class={`hgi-stroke ${s.icon} text-[var(--color-text-primary)] text-sm transition-colors duration-200`}></i>
+        <span class="text-[var(--color-text-primary)] text-[10px] font-semibold tracking-[0.5px] md:text-[11px] md:tracking-[1px]">{s.label}</span>
+      </a>
+    ))}
+  </div>
+
+  <!-- Divider -->
+  <div class="w-full h-px bg-[var(--color-border)]"></div>
+
+  <!-- Bottom Bar -->
+  <div class="flex flex-col gap-3 w-full sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex items-center gap-2">
+      <i class="hgi-stroke hgi-location-01 text-[var(--color-text-dark)] text-xs"></i>
+      <span class="text-[var(--color-text-dark)] text-[11px] font-medium tracking-[1px]">BRASIL</span>
+    </div>
+    <span class="text-[var(--color-text-dark)] text-[11px] font-medium tracking-[1px]">&copy; 2026 BRUNO ALVES</span>
+  </div>
+</footer>
