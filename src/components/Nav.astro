@@ -7,34 +7,63 @@ const navLinks = [
 ];
 ---
 
-<nav class="flex flex-col gap-4 bg-[var(--color-bg-card)] px-5 py-4 border border-[var(--color-border)] md:flex-row md:items-center md:gap-5 md:px-8 md:py-[22px]">
+<nav
+  class="flex flex-col gap-4 bg-(--color-bg-card) px-5 py-4 border border-(--color-border) md:flex-row md:items-center md:gap-5 md:px-8 md:py-5.5"
+>
   <!-- Brand -->
   <div class="flex items-center justify-between">
     <div class="flex items-center gap-2">
-      <i class="hgi-stroke hgi-terminal text-[var(--color-accent)] text-sm"></i>
+      <i class="hgi-stroke hgi-terminal text-(--color-accent) text-sm"></i>
       <div class="flex flex-col gap-1">
-        <span class="text-[var(--color-text-primary)] text-sm font-bold tracking-[2px] typewriter-cursor" data-typewriter="BRUNO ALVES_" data-typewriter-speed="60" data-typewriter-loop data-typewriter-auto></span>
-        <span class="text-[var(--color-text-dark)] text-[11px] font-medium">Full Stack Developer / AI Systems</span>
+        <span
+          class="text-(--color-text-primary) text-sm font-bold tracking-[2px] typewriter-cursor"
+          data-typewriter="BRUNO ALVES_"
+          data-typewriter-speed="60"
+          data-typewriter-loop
+          data-typewriter-auto></span>
+        <span class="text-(--color-text-dark) text-[11px] font-medium"
+          >Full Stack Developer / AI Systems</span
+        >
       </div>
     </div>
     <!-- Mobile CTA -->
-    <a href="mailto:nito.ba.dev@gmail.com" class="bg-[var(--color-accent)] px-3 py-2 transition-all duration-200 hover:brightness-110 active:scale-95 md:hidden">
-      <span class="text-[var(--color-text-on-accent)] text-[10px] font-bold tracking-[1px]">CONTATO</span>
+    <a
+      href="mailto:nito.ba.dev@gmail.com"
+      class="bg-(--color-accent) px-3 py-2 transition-all duration-200 hover:brightness-110 active:scale-95 md:hidden"
+    >
+      <span
+        class="text-(--color-text-on-accent) text-[10px] font-bold tracking-[1px]"
+        >CONTATO</span
+      >
     </a>
   </div>
 
   <!-- Links -->
-  <div class="flex items-center gap-4 overflow-x-auto md:gap-8 md:flex-1 md:justify-end lg:w-[260px]">
-    {navLinks.map((link) => (
-      <a href={link.href} class="flex items-center gap-1.5 text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] transition-colors shrink-0 md:gap-2">
-        <i class={`hgi-stroke ${link.icon} text-xs`}></i>
-        <span class="text-[10px] font-medium tracking-[0.5px] md:text-xs md:tracking-[1px]">{link.label}</span>
-      </a>
-    ))}
+  <div
+    class="flex items-center gap-4 overflow-x-auto md:gap-8 md:flex-1 md:justify-end lg:w-65"
+  >
+    {
+      navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="flex items-center gap-1.5 text-(--color-text-muted) hover:text-(--color-text-primary) transition-colors shrink-0 md:gap-2"
+        >
+          <i class={`hgi-stroke ${link.icon} text-xs`} />
+          <span class="text-[10px] font-medium tracking-[0.5px] md:text-xs md:tracking-[1px]">
+            {link.label}
+          </span>
+        </a>
+      ))
+    }
   </div>
 
   <!-- Desktop CTA -->
-  <a href="mailto:nito.ba.dev@gmail.com" class="hidden md:block bg-[var(--color-accent)] px-[18px] py-3 transition-all duration-200 hover:brightness-110 hover:scale-[1.02] active:scale-95">
-    <span class="text-[var(--color-text-on-accent)] text-xs font-bold tracking-[1px]">FALE COMIGO</span>
+  <a
+    href="mailto:nito.ba.dev@gmail.com"
+    class="hidden md:block bg-(--color-accent) px-4.5 py-3 transition-all duration-200 hover:brightness-110 hover:scale-[1.02] active:scale-95"
+  >
+    <span class="text-(--color-text-on-accent) text-xs font-bold tracking-[1px]"
+      >FALE COMIGO</span
+    >
   </a>
 </nav>

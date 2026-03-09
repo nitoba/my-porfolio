@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
 
 interface Props {
   title: string;
@@ -13,27 +13,48 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Bruno Alves — Full Stack Developer especializado em React, Next.js, Node.js, NestJS, React Native, Flutter e IA aplicada." />
+    <meta
+      name="description"
+      content="Bruno Alves — Full Stack Developer especializado em React, Next.js, Node.js, NestJS, React Native, Flutter e IA aplicada."
+    />
     <meta name="author" content="Bruno Alves" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Bruno Alves — Full Stack Developer / AI Systems" />
-    <meta property="og:description" content="Portfolio de Bruno Alves. 6+ anos criando produtos digitais, apps e sistemas com IA aplicada." />
+    <meta
+      property="og:title"
+      content="Bruno Alves — Full Stack Developer / AI Systems"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio de Bruno Alves. 6+ anos criando produtos digitais, apps e sistemas com IA aplicada."
+    />
     <meta property="og:url" content="https://nitodev.vercel.app" />
     <meta property="og:site_name" content="Bruno Alves Portfolio" />
     <meta property="og:locale" content="pt_BR" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Bruno Alves — Full Stack Developer / AI Systems" />
-    <meta name="twitter:description" content="Portfolio de Bruno Alves. 6+ anos criando produtos digitais, apps e sistemas com IA aplicada." />
+    <meta
+      name="twitter:title"
+      content="Bruno Alves — Full Stack Developer / AI Systems"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio de Bruno Alves. 6+ anos criando produtos digitais, apps e sistemas com IA aplicada."
+    />
     <meta name="twitter:creator" content="@nito_b_a" />
     <meta name="theme-color" content="#0F0F10" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"
+    />
     <title>{title}</title>
   </head>
-  <body class="bg-[var(--color-bg-primary)] font-mono antialiased">
+  <body class="bg-(--color-bg-primary) font-mono antialiased">
     <slot />
 
     <script>
@@ -72,7 +93,9 @@ const { title } = Astro.props;
       }
 
       // Scroll-reveal observer
-      const revealEls = document.querySelectorAll<HTMLElement>("[data-reveal], [data-reveal-stagger]");
+      const revealEls = document.querySelectorAll<HTMLElement>(
+        "[data-reveal], [data-reveal-stagger]",
+      );
       if (revealEls.length > 0) {
         const revealObserver = new IntersectionObserver(
           (entries) => {
@@ -83,18 +106,22 @@ const { title } = Astro.props;
               }
             });
           },
-          { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+          { threshold: 0.08, rootMargin: "0px 0px -40px 0px" },
         );
         revealEls.forEach((el) => revealObserver.observe(el));
       }
 
       // Auto-start elements (visible on load, like nav brand)
-      document.querySelectorAll<HTMLElement>("[data-typewriter-auto]").forEach((el) => {
-        typewrite(el);
-      });
+      document
+        .querySelectorAll<HTMLElement>("[data-typewriter-auto]")
+        .forEach((el) => {
+          typewrite(el);
+        });
 
       // Scroll-triggered elements (hero eyebrow, footer brand)
-      const scrollEls = document.querySelectorAll<HTMLElement>("[data-typewriter]:not([data-typewriter-auto])");
+      const scrollEls = document.querySelectorAll<HTMLElement>(
+        "[data-typewriter]:not([data-typewriter-auto])",
+      );
 
       if (scrollEls.length > 0) {
         const observer = new IntersectionObserver(
@@ -106,7 +133,7 @@ const { title } = Astro.props;
               }
             });
           },
-          { threshold: 0.5 }
+          { threshold: 0.5 },
         );
 
         scrollEls.forEach((el) => observer.observe(el));
